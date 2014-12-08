@@ -1,0 +1,125 @@
+/**
+ * This support file is used to style the WYSIWYG editor in the CMS
+ */
+#bodyResume{
+	
+	background-color: #6D844F;
+	height: 100%;
+	position: absolute;
+	display: block;
+	width: 100%;
+	float: left;
+	left: 0;
+	top: 0;
+  min-width: 1375px;
+  min-height: 789px;
+	
+  .backgroundWrapper{
+    background-image: url('/assets/pages/homelessHottiesGradient.png');  
+    height: 100%;
+    width: auto;
+    background-position: top;
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+    min-width: 1375px;
+    min-height: 789px;
+
+  }
+  .mainImage {
+  	height: 100%;
+    img {
+      height: 90%;
+      margin-top: 150px;
+      margin-left: -33px;
+      position: absolute;
+      bottom: 0px;
+    }
+  }
+  .filmContainer{
+    padding-top: 80px;
+    width: 100%;
+    height: 383px;
+    z-index: 60;
+    display: block;
+    position: absolute;
+  }
+  #filmStrip{
+      top: 0;
+      width: 100%;
+      z-index: 60;
+  }
+  .columnRight{
+    display: inline-block;
+    width: 35%;
+    height: 100%;
+    position: absolute;
+    left: 743px;
+    z-index: 65;
+  }
+  .columnLeft {
+    width: 54%;
+    padding: 0px;
+    display: inline-block;
+    margin: 0px;
+    vertical-align: top;
+    float: left;
+    top: 183px;
+    height: 521px;
+    position: absolute;
+    @media (min-width:1280px){
+      z-index: 65;
+    }
+    .Title1 {
+      font-family: $fontProximaCondLight;
+      color: white;
+      display: inline-block;
+      font-size: 6em;
+      position: absolute;
+      width: 25%;
+      top: 113px;
+      padding: 0px;
+      left: 246px;
+      letter-spacing: 9px;
+      z-index: 50;
+    }
+    .Title2 {
+      color: #f7d501;
+      display: block;
+      font-size: 6em;
+      position: absolute;
+      padding: 0px;
+      font-family: $fontProximaBold;
+      left: 245px;
+      top: 187px;
+      letter-spacing: -4.6px;
+      z-index: 50;
+    }
+    #jobTitleList{
+      display: block;
+      font-size: 17px;
+      color: white;
+      position: absolute;
+      top: 273px;
+      left: 204px;
+      z-index: 50;
+
+      li{
+        float: left;
+        padding-right: 4px;
+        list-style-type: disc;
+        }
+    }
+    #resumeContent{
+      font-family: $fontProximaCondLight;
+      font-size: 1.3em;
+      font-weight: bold;
+      letter-spacing: 1.5px;
+      width: 50%;
+      color: rgb(87, 73, 73);
+      z-index: 50;
+      top: 313px;
+      left: 247px;
+      position: relative;
+    }
+  }
+}

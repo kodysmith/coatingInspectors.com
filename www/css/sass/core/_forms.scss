@@ -1,0 +1,82 @@
+// Remove webkits number spinner icon
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+// Clear input boxes on focus in webkit/firefox browsers
+input:focus::-webkit-input-placeholder {
+	color:#fff;
+}
+input:focus:-moz-placeholder {
+	color: #fff;
+}
+
+
+// Define the core text-like input styles here
+%inputs {
+    background: white;
+    border: 1px solid #BBB;
+    @include border-radius(5px);
+    @include box-shadow(1px 1px 7px #CCC inset);
+    color: #333;
+    font: 12px/100% $fontArial;
+    height: 22px;
+    outline: none;
+    padding: 3px 5px 0 7px;
+    width: 180px;
+
+    .lt-ie8 & {
+        border: 1px inset #bbb;
+        color: #333;
+        height: 18px;
+        padding-top: 7px;
+    }
+
+	.ie8 & {
+		height: 17px;
+		padding-top: 8px;
+	}
+}
+
+input[type="text"],
+input[type="url"],
+input[type="search"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="number"] {
+	@extend %inputs;
+}
+
+/** form specific styles **/
+
+.errorMsg { color: red; font-size: 1.4em; margin: 0 0 0 13px; }
+.errors {
+	width: 572px;
+	margin: 20px 0 20px 13px;
+	padding: 5px 10px 10px 10px;
+	background: #FFE7E2 url(/img/forms/icon_warning.gif) no-repeat 98% 80%;
+	border: 1px solid #FBC2C4;
+	}
+.errors h3 { color: #FB0B02; margin: 0 0 10px 0;}
+.errors ul { }
+.errors ul li {
+	margin: 0 50px 0 0;
+	font: normal 1.2em Arial, Helvetica, sans-serif;
+	color: #FB0B02;
+}
+	
+form input[type=text].required, form input[type=password].required { background: url(/img/icon_input_required.gif) no-repeat 99% center; background-color: #FFE7E2; }
+form input[type=text].invalid, form input[type=password].invalid { background: url(/img/icon_input_invalid.gif) no-repeat 99% center; background-color: #FFE7E2; }
+form input[type=text].invalidNoToken, form input[type=text].requiredNoToken {background: #FFE7E2;}
+
+
+form select.required, form select.invalid { 
+	border: 1px solid #FBC2C4; 
+	border-top: 2px solid #FBC2C4; 
+	background: #FFE7E2; 
+}
+
+

@@ -1,0 +1,102 @@
+/**
+ * This support file is used to style the WYSIWYG editor in the CMS
+ */
+
+#bodyContact{
+  background-image: url('/assets/pages/contactUsBackground.png');
+  background-color: #e1477e;
+  height: 100%;
+  display: block;
+  width: 100%;
+  float: left;
+  background-position: top;
+  background-repeat: repeat;
+  min-height: 600px;
+  .contentWrapper{
+    min-width: 1375px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    min-height: 800px;
+  }
+  .columnRight{
+    display: inline-block;
+    width: 35%;
+    overflow: hidden;
+    height: 100%;
+    .mainImage img {
+    height: 88%;
+    margin-left: 90px;
+    padding-top: 40px;
+    position: absolute;
+    bottom: -54;
+    min-height: 600px;
+    }
+  }
+  .columnLeft {
+    width: 54%;
+    padding: 0px;
+    display: inline-block;
+    margin: 0px;
+    vertical-align: top;
+    float: left;
+    #contactList{
+      display: block;
+      font-size: 32px;
+      color: rgb(11,11,11);
+      position: absolute;
+      top: 512px;
+      left: 203px;
+
+      li{
+        float: left;
+        padding-right: 51px;
+        list-style-type: disc;
+        font-weight: 800;
+        }
+    }
+    #nameLarge{
+      top: 177px;
+      left: 251px;
+      position: relative;
+      height: 428px;
+      width: 700px;
+      z-index: 99;
+    }
+    #logo{
+      height: 332px;
+      width: auto;
+    }
+    #contactIcons{
+      top: 191px;
+      left: 278px;
+      position: relative;
+      z-index: 99;
+    }
+    #facebookIcon{
+      top:0px;
+      left:0px;
+      padding-right: 45px;
+    }
+    #pinterestIcon{
+      top:0px;
+      left:100px;
+      padding-right: 45px;
+    }
+    #instagramIcon{
+      top: 0px;
+      left: 200px;
+      padding-right: 45px;
+    }
+    #youTubeIcon{
+      top: 0px;
+      left: 300;
+      padding-right: 45px;
+    }
+    #emailIcon{
+      top: 0px;
+      left: 400px;
+    }
+  }
+}

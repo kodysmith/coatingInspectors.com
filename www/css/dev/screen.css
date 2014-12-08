@@ -1,0 +1,1451 @@
+/*!
+* Description: CSS Styles. 
+*/
+/**
+* These include the SASS files and output them to a CSS file. All the styles
+* should make a small css file that can be downloaded once and cached to
+* improve the end user experience. If the outputted file is found to be too
+* large, it can be broken up into smaller files.
+*/
+/*Colors used in the site
+example:
+$blue: #075081;
+*/
+/*!
+This CSS resource incorporates links to font software which is
+the valuable copyrighted property of Monotype Imaging and/or
+its suppliers. You may not attempt to copy, install, redistribute, convert,
+modify or reverse engineer this font software. Please contact Monotype Imaging
+with any questions regarding Web Fonts:  http://webfonts.fonts.com
+*/
+/**
+ * External fonts are defined here. Put them in the /css/fonts directory. 
+ * Google and other web hosted fonts are defined below
+ */
+/*
+$fontRounded: "HelveticaW01-RoundedBd", $fontDefault;
+@font-face{
+    font-family:"HelveticaW01-RoundedBd";
+    font-weight:bold;
+    font-style:normal;
+    font-variant:normal;
+    src:url("/css/Fonts/79e78e0d-1e3d-4298-8913-6f12cf008e7d.eot?iefix") format("eot");
+}
+@font-face{
+    font-family:"HelveticaW01-RoundedBd";
+    font-weight:bold;
+    font-style:normal;
+    font-variant:normal;
+    src:url("/css/Fonts/79e78e0d-1e3d-4298-8913-6f12cf008e7d.eot?iefix");
+    src:
+        url("/css/Fonts/c280ced9-704c-46b2-a66a-aff7ee1627bf.woff") format("woff"),
+        url("/css/Fonts/548e8c1d-b37a-43af-b197-a35e2f0c3d2f.ttf") format("truetype"),
+        url("/css/Fonts/5e9b82e3-aa53-4064-b984-f49aa751081d.svg#5e9b82e3-aa53-4064-b984-f49aa751081d") format("svg");
+}
+*/
+/**
+ * Google hosted fonts. Include the include script in your page header file and
+ * then reference the font name here
+ */
+@font-face {
+  font-family: "Proxima N W01 Reg";
+  src: url("../Fonts/7e90123f-e4a7-4689-b41f-6bcfe331c00a.eot?#iefix");
+  src: url("../Fonts/7e90123f-e4a7-4689-b41f-6bcfe331c00a.eot?#iefix") format("eot"), url("../Fonts/e56ecb6d-da41-4bd9-982d-2d295bec9ab0.woff") format("woff"), url("../Fonts/2aff4f81-3e97-4a83-9e6c-45e33c024796.ttf") format("truetype"), url("../Fonts/ab9cd062-380f-4b53-b1a7-c0bec7402235.svg#ab9cd062-380f-4b53-b1a7-c0bec7402235") format("svg");
+}
+@font-face {
+  font-family: "Proxima N W01 Smbd";
+  src: url("../Fonts/87e4b4fc-cdf1-450a-8bed-dd818cba908d.eot?#iefix");
+  src: url("../Fonts/87e4b4fc-cdf1-450a-8bed-dd818cba908d.eot?#iefix") format("eot"), url("../Fonts/70ae52ec-d89b-4c6a-9402-854ebe423c54.woff") format("woff"), url("../Fonts/6a35571c-ea14-4dac-9ae1-0e7af0abeec8.ttf") format("truetype"), url("../Fonts/ac2bdafc-d4a8-49d0-8a10-4e2f16bf7e3c.svg#ac2bdafc-d4a8-49d0-8a10-4e2f16bf7e3c") format("svg");
+}
+@font-face {
+  font-family: "Proxima N W01 Bold";
+  src: url("../Fonts/fbc6b03a-b3a1-427c-a884-053deca3a53c.eot?#iefix");
+  src: url("../Fonts/fbc6b03a-b3a1-427c-a884-053deca3a53c.eot?#iefix") format("eot"), url("../Fonts/d999c07b-a049-4eb5-b8a6-4f36ae25e67e.woff") format("woff"), url("../Fonts/4d4a75f5-d32a-4a09-8665-133afd39cc37.ttf") format("truetype"), url("../Fonts/8152bc4e-d700-4c78-b6be-326893e6f53f.svg#8152bc4e-d700-4c78-b6be-326893e6f53f") format("svg");
+}
+@font-face {
+  font-family: "Proxima N W01 Xbold";
+  src: url("../Fonts/9fbce143-f5db-4c0b-9159-b1e666079f67.eot?#iefix");
+  src: url("../Fonts/9fbce143-f5db-4c0b-9159-b1e666079f67.eot?#iefix") format("eot"), url("../Fonts/19dd5cf2-ac2d-48d5-901a-c432fd291ee2.woff") format("woff"), url("../Fonts/22cfbfa4-f607-4751-92eb-6fa194353e57.ttf") format("truetype"), url("../Fonts/3d6b6348-e05f-4123-b19a-3bfd02c7f361.svg#3d6b6348-e05f-4123-b19a-3bfd02c7f361") format("svg");
+}
+@font-face {
+  font-family: "Proxima N W15 Cd Light";
+  src: url("../Fonts/71d27047-aee7-4513-aa39-93acec4189af.eot?#iefix");
+  src: url("../Fonts/71d27047-aee7-4513-aa39-93acec4189af.eot?#iefix") format("eot"), url("../Fonts/69d0a741-16e2-4ba2-9f9d-4fbe3d972acf.woff") format("woff"), url("../Fonts/c650156e-a72f-4031-8687-7e3519940f30.ttf") format("truetype"), url("../Fonts/d1116fb4-2dec-4fad-b64c-4ed24e4d3db0.svg#d1116fb4-2dec-4fad-b64c-4ed24e4d3db0") format("svg");
+}
+@font-face {
+  font-family: "Proxima N W15 Cd Smbd";
+  src: url("../Fonts/d98fcd0d-5b66-4059-8543-8b20d2df6c4e.eot?#iefix");
+  src: url("../Fonts/d98fcd0d-5b66-4059-8543-8b20d2df6c4e.eot?#iefix") format("eot"), url("../Fonts/25fea31c-0cde-4457-b875-139b2f814d65.woff") format("woff"), url("../Fonts/8304ee6d-ecc7-4c17-bc8d-86f956dd63ed.ttf") format("truetype"), url("../Fonts/b08d6b72-1661-499a-be7b-a62094eab547.svg#b08d6b72-1661-499a-be7b-a62094eab547") format("svg");
+}
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+/* line 14, ../sass/plugins/_boilerplate.scss */
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+}
+
+/* line 22, ../sass/plugins/_boilerplate.scss */
+body {
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+/* line 33, ../sass/plugins/_boilerplate.scss */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/* line 38, ../sass/plugins/_boilerplate.scss */
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+/* line 47, ../sass/plugins/_boilerplate.scss */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+/* line 60, ../sass/plugins/_boilerplate.scss */
+img {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+/* line 68, ../sass/plugins/_boilerplate.scss */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+/* line 78, ../sass/plugins/_boilerplate.scss */
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+/* line 86, ../sass/plugins/_boilerplate.scss */
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Image replacement
+ */
+/* line 101, ../sass/plugins/_boilerplate.scss */
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  /* IE 6/7 fallback */
+  *text-indent: -9999px;
+}
+
+/* line 109, ../sass/plugins/_boilerplate.scss */
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+/* line 120, ../sass/plugins/_boilerplate.scss */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+/* line 129, ../sass/plugins/_boilerplate.scss */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+/* line 145, ../sass/plugins/_boilerplate.scss */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+/* line 159, ../sass/plugins/_boilerplate.scss */
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+/* line 175, ../sass/plugins/_boilerplate.scss */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+/* line 181, ../sass/plugins/_boilerplate.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+/* line 190, ../sass/plugins/_boilerplate.scss */
+.clearfix {
+  *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+@media print, (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+@media print {
+  /* line 217, ../sass/plugins/_boilerplate.scss */
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* line 224, ../sass/plugins/_boilerplate.scss */
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  /* line 229, ../sass/plugins/_boilerplate.scss */
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  /* line 233, ../sass/plugins/_boilerplate.scss */
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links for images, or javascript/internal links
+   */
+  /* line 241, ../sass/plugins/_boilerplate.scss */
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+
+  /* line 247, ../sass/plugins/_boilerplate.scss */
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /* line 253, ../sass/plugins/_boilerplate.scss */
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */
+  }
+
+  /* line 257, ../sass/plugins/_boilerplate.scss */
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  /* line 262, ../sass/plugins/_boilerplate.scss */
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+  }
+  /* line 270, ../sass/plugins/_boilerplate.scss */
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* line 277, ../sass/plugins/_boilerplate.scss */
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+/*
+ * Common CSS
+ *
+ */
+/* !warning */
+/* line 7, ../sass/plugins/_warning.scss */
+.warning span.externalTooltip,
+a.warningLink span,
+.warning-fr span.externalTooltip,
+a.warningLink-fr span,
+.warning-sp span.externalTooltip,
+a.warningLink-sp span {
+  display: none;
+  padding: 5px;
+  font: normal 10px/12px Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  background: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  width: 150px;
+  color: #444;
+  text-align: left;
+}
+
+/* line 24, ../sass/plugins/_warning.scss */
+.warning,
+.warning-fr,
+.warning-sp {
+  position: relative;
+  z-Index: 100;
+}
+/* line 30, ../sass/plugins/_warning.scss */
+.warning a, .warning a:hover,
+.warning-fr a,
+.warning-fr a:hover,
+.warning-sp a,
+.warning-sp a:hover {
+  text-decoration: none;
+}
+
+/* line 35, ../sass/plugins/_warning.scss */
+.warning span.externalTooltip,
+.warning-sp span.externalTooltip {
+  position: absolute;
+  margin-left: 80px;
+  margin-top: -80px;
+  top: 0px;
+  left: 0px;
+  z-Index: 100;
+}
+
+/* line 44, ../sass/plugins/_warning.scss */
+.warning-fr span.externalTooltip {
+  position: absolute;
+  margin-left: 80px;
+  margin-top: -92px;
+  top: 0px;
+  left: 0px;
+  z-Index: 100;
+}
+
+/* line 53, ../sass/plugins/_warning.scss */
+.warning:hover span.externalTooltip,
+.warning.whover span.externalTooltip,
+.warning-fr:hover span.externalTooltip,
+.warning-fr.whover span.externalTooltip,
+.warning-sp:hover span.externalTooltip,
+.warning-sp.whover span.externalTooltip {
+  display: block;
+}
+
+/* line 62, ../sass/plugins/_warning.scss */
+a.warningLink span,
+a.warningLink-sp span {
+  margin-left: -80px;
+  margin-top: -80px;
+}
+
+/* line 67, ../sass/plugins/_warning.scss */
+a#fbBtn.warningLink span, a#fbBtn.warningLink-sp span,
+a#youtubeBtn.warningLink span, a#youtubeBtn.warningLink-sp span {
+  margin-left: -180px;
+  margin-top: -20px;
+}
+
+/* line 73, ../sass/plugins/_warning.scss */
+a.warningLink-fr span {
+  margin-left: -80px;
+  margin-top: -92px;
+}
+
+/* line 79, ../sass/plugins/_warning.scss */
+a.warningLink:hover,
+a.warningLink-fr:hover,
+a.warningLink-sp:hover {
+  background: none;
+  text-decoration: none;
+}
+
+/* line 86, ../sass/plugins/_warning.scss */
+a.warningLink:hover span,
+a.warningLink-fr:hover span,
+a.warningLink-sp:hover span {
+  display: inline;
+  position: absolute;
+  z-Index: 100;
+}
+
+/*!
+* Line break
+*/
+/**
+* These are the site core stylings. Things like global a, h1, p stylings 
+* should and default page structure go in here. Anything specific to a single 
+* page or override should go in the pages sections.
+*/
+/* line 1, ../sass/core/_html.scss */
+html {
+  font: 12px/100% Helvetica, Verdana, Arial, sans-serif;
+}
+
+/* line 4, ../sass/core/_html.scss */
+.readMoreLink {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+/* line 11, ../sass/core/_html.scss */
+.seeResumeLink {
+  text-decoration: none;
+  color: white;
+  font-size: 1.6em;
+  font-weight: bold;
+  letter-spacing: 4px;
+}
+
+/* line 18, ../sass/core/_html.scss */
+.contactLink {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2em;
+  font-weight: bold;
+  letter-spacing: -2px;
+}
+
+/* line 2, ../sass/core/_forms.scss */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* line 9, ../sass/core/_forms.scss */
+input:focus::-webkit-input-placeholder {
+  color: #fff;
+}
+
+/* line 12, ../sass/core/_forms.scss */
+input:focus:-moz-placeholder {
+  color: #fff;
+}
+
+/* line 18, ../sass/core/_forms.scss */
+input[type="text"],
+input[type="url"],
+input[type="search"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="number"] {
+  background: white;
+  border: 1px solid #BBB;
+  border-radius: 5px;
+  background-clip: padding-box;
+  -webkit-box-shadow: 1px 1px 7px #CCC inset;
+  box-shadow: 1px 1px 7px #CCC inset;
+  color: #333;
+  font: 12px/100% Arial, sans-serif;
+  height: 22px;
+  outline: none;
+  padding: 3px 5px 0 7px;
+  width: 180px;
+}
+/* line 30, ../sass/core/_forms.scss */
+.lt-ie8 input[type="text"],
+.lt-ie8 input[type="url"],
+.lt-ie8 input[type="search"],
+.lt-ie8 input[type="email"],
+.lt-ie8 input[type="tel"],
+.lt-ie8 input[type="password"],
+.lt-ie8 input[type="number"] {
+  border: 1px inset #bbb;
+  color: #333;
+  height: 18px;
+  padding-top: 7px;
+}
+/* line 37, ../sass/core/_forms.scss */
+.ie8 input[type="text"],
+.ie8 input[type="url"],
+.ie8 input[type="search"],
+.ie8 input[type="email"],
+.ie8 input[type="tel"],
+.ie8 input[type="password"],
+.ie8 input[type="number"] {
+  height: 17px;
+  padding-top: 8px;
+}
+
+/** form specific styles **/
+/* line 55, ../sass/core/_forms.scss */
+.errorMsg {
+  color: red;
+  font-size: 1.4em;
+  margin: 0 0 0 13px;
+}
+
+/* line 56, ../sass/core/_forms.scss */
+.errors {
+  width: 572px;
+  margin: 20px 0 20px 13px;
+  padding: 5px 10px 10px 10px;
+  background: #FFE7E2 url(/img/forms/icon_warning.gif) no-repeat 98% 80%;
+  border: 1px solid #FBC2C4;
+}
+
+/* line 63, ../sass/core/_forms.scss */
+.errors h3 {
+  color: #FB0B02;
+  margin: 0 0 10px 0;
+}
+
+/* line 65, ../sass/core/_forms.scss */
+.errors ul li {
+  margin: 0 50px 0 0;
+  font: normal 1.2em Arial, Helvetica, sans-serif;
+  color: #FB0B02;
+}
+
+/* line 71, ../sass/core/_forms.scss */
+form input[type=text].required, form input[type=password].required {
+  background: url(/img/icon_input_required.gif) no-repeat 99% center;
+  background-color: #FFE7E2;
+}
+
+/* line 72, ../sass/core/_forms.scss */
+form input[type=text].invalid, form input[type=password].invalid {
+  background: url(/img/icon_input_invalid.gif) no-repeat 99% center;
+  background-color: #FFE7E2;
+}
+
+/* line 73, ../sass/core/_forms.scss */
+form input[type=text].invalidNoToken, form input[type=text].requiredNoToken {
+  background: #FFE7E2;
+}
+
+/* line 76, ../sass/core/_forms.scss */
+form select.required, form select.invalid {
+  border: 1px solid #FBC2C4;
+  border-top: 2px solid #FBC2C4;
+  background: #FFE7E2;
+}
+
+/*http://blog.typekit.com/2011/11/09/type-study-sizing-the-legible-letter/*/
+/* line 2, ../sass/core/_structure.scss */
+html {
+  font: 100%/100% Helvetica, Verdana, Arial, sans-serif;
+  /*100% is roughly equivalent to 16px.*/
+}
+
+/* line 5, ../sass/core/_structure.scss */
+body {
+  margin: 0;
+}
+
+/* line 1, ../sass/core/_navigation.scss */
+#mainNav {
+  position: absolute;
+  left: 171px;
+  top: 80px;
+  z-index: 999;
+}
+/* line 7, ../sass/core/_navigation.scss */
+#mainNav #navCookieBanner {
+  width: 993px;
+  height: 70px;
+  position: relative;
+  left: 63px;
+  display: block;
+}
+/* line 13, ../sass/core/_navigation.scss */
+#mainNav #navCookieBanner #navCookieBannerImage {
+  height: 53px;
+  width: 812px;
+  position: relative;
+  top: 5px;
+}
+/* line 20, ../sass/core/_navigation.scss */
+#mainNav ul {
+  display: block;
+  height: 47px;
+  padding: 0px 0px 0px 30px;
+  margin: 0px;
+  position: absolute;
+  width: 996px;
+  background-repeat: no-repeat;
+  top: 14px;
+  left: 0px;
+}
+/* line 31, ../sass/core/_navigation.scss */
+#mainNav li {
+  float: left;
+  position: relative;
+  padding-left: 21px;
+  font-weight: bolder;
+  margin-top: 0px;
+  font-size: 1.5em;
+}
+/* line 38, ../sass/core/_navigation.scss */
+#mainNav li a {
+  color: #e1477e;
+  text-decoration: none;
+}
+/* line 44, ../sass/core/_navigation.scss */
+#mainNav #facebookNav {
+  padding-left: 10px;
+}
+/* line 47, ../sass/core/_navigation.scss */
+#mainNav #navCookie {
+  width: 127px;
+  z-index: 1000;
+  position: absolute;
+  display: block;
+  left: -14px;
+  top: -47px;
+}
+/* line 54, ../sass/core/_navigation.scss */
+#mainNav #navCookie img {
+  width: 100%;
+  height: auto;
+}
+/* line 58, ../sass/core/_navigation.scss */
+#mainNav #navCookie .navSelected {
+  text-decoration: underline;
+}
+
+/*!
+This CSS resource incorporates links to font software which is
+the valuable copyrighted property of Monotype Imaging and/or
+its suppliers. You may not attempt to copy, install, redistribute, convert,
+modify or reverse engineer this font software. Please contact Monotype Imaging
+with any questions regarding Web Fonts:  http://webfonts.fonts.com
+*/
+/**
+ * External fonts are defined here. Put them in the /css/fonts directory. 
+ * Google and other web hosted fonts are defined below
+ */
+/*
+$fontRounded: "HelveticaW01-RoundedBd", $fontDefault;
+@font-face{
+    font-family:"HelveticaW01-RoundedBd";
+    font-weight:bold;
+    font-style:normal;
+    font-variant:normal;
+    src:url("/css/Fonts/79e78e0d-1e3d-4298-8913-6f12cf008e7d.eot?iefix") format("eot");
+}
+@font-face{
+    font-family:"HelveticaW01-RoundedBd";
+    font-weight:bold;
+    font-style:normal;
+    font-variant:normal;
+    src:url("/css/Fonts/79e78e0d-1e3d-4298-8913-6f12cf008e7d.eot?iefix");
+    src:
+        url("/css/Fonts/c280ced9-704c-46b2-a66a-aff7ee1627bf.woff") format("woff"),
+        url("/css/Fonts/548e8c1d-b37a-43af-b197-a35e2f0c3d2f.ttf") format("truetype"),
+        url("/css/Fonts/5e9b82e3-aa53-4064-b984-f49aa751081d.svg#5e9b82e3-aa53-4064-b984-f49aa751081d") format("svg");
+}
+*/
+/**
+ * Google hosted fonts. Include the include script in your page header file and
+ * then reference the font name here
+ */
+@font-face {
+  font-family: "Proxima N W01 Reg";
+  src: url("../Fonts/7e90123f-e4a7-4689-b41f-6bcfe331c00a.eot?#iefix");
+  src: url("../Fonts/7e90123f-e4a7-4689-b41f-6bcfe331c00a.eot?#iefix") format("eot"), url("../Fonts/e56ecb6d-da41-4bd9-982d-2d295bec9ab0.woff") format("woff"), url("../Fonts/2aff4f81-3e97-4a83-9e6c-45e33c024796.ttf") format("truetype"), url("../Fonts/ab9cd062-380f-4b53-b1a7-c0bec7402235.svg#ab9cd062-380f-4b53-b1a7-c0bec7402235") format("svg");
+}
+@font-face {
+  font-family: "Proxima N W01 Smbd";
+  src: url("../Fonts/87e4b4fc-cdf1-450a-8bed-dd818cba908d.eot?#iefix");
+  src: url("../Fonts/87e4b4fc-cdf1-450a-8bed-dd818cba908d.eot?#iefix") format("eot"), url("../Fonts/70ae52ec-d89b-4c6a-9402-854ebe423c54.woff") format("woff"), url("../Fonts/6a35571c-ea14-4dac-9ae1-0e7af0abeec8.ttf") format("truetype"), url("../Fonts/ac2bdafc-d4a8-49d0-8a10-4e2f16bf7e3c.svg#ac2bdafc-d4a8-49d0-8a10-4e2f16bf7e3c") format("svg");
+}
+@font-face {
+  font-family: "Proxima N W01 Bold";
+  src: url("../Fonts/fbc6b03a-b3a1-427c-a884-053deca3a53c.eot?#iefix");
+  src: url("../Fonts/fbc6b03a-b3a1-427c-a884-053deca3a53c.eot?#iefix") format("eot"), url("../Fonts/d999c07b-a049-4eb5-b8a6-4f36ae25e67e.woff") format("woff"), url("../Fonts/4d4a75f5-d32a-4a09-8665-133afd39cc37.ttf") format("truetype"), url("../Fonts/8152bc4e-d700-4c78-b6be-326893e6f53f.svg#8152bc4e-d700-4c78-b6be-326893e6f53f") format("svg");
+}
+@font-face {
+  font-family: "Proxima N W01 Xbold";
+  src: url("../Fonts/9fbce143-f5db-4c0b-9159-b1e666079f67.eot?#iefix");
+  src: url("../Fonts/9fbce143-f5db-4c0b-9159-b1e666079f67.eot?#iefix") format("eot"), url("../Fonts/19dd5cf2-ac2d-48d5-901a-c432fd291ee2.woff") format("woff"), url("../Fonts/22cfbfa4-f607-4751-92eb-6fa194353e57.ttf") format("truetype"), url("../Fonts/3d6b6348-e05f-4123-b19a-3bfd02c7f361.svg#3d6b6348-e05f-4123-b19a-3bfd02c7f361") format("svg");
+}
+@font-face {
+  font-family: "Proxima N W15 Cd Light";
+  src: url("../Fonts/71d27047-aee7-4513-aa39-93acec4189af.eot?#iefix");
+  src: url("../Fonts/71d27047-aee7-4513-aa39-93acec4189af.eot?#iefix") format("eot"), url("../Fonts/69d0a741-16e2-4ba2-9f9d-4fbe3d972acf.woff") format("woff"), url("../Fonts/c650156e-a72f-4031-8687-7e3519940f30.ttf") format("truetype"), url("../Fonts/d1116fb4-2dec-4fad-b64c-4ed24e4d3db0.svg#d1116fb4-2dec-4fad-b64c-4ed24e4d3db0") format("svg");
+}
+@font-face {
+  font-family: "Proxima N W15 Cd Smbd";
+  src: url("../Fonts/d98fcd0d-5b66-4059-8543-8b20d2df6c4e.eot?#iefix");
+  src: url("../Fonts/d98fcd0d-5b66-4059-8543-8b20d2df6c4e.eot?#iefix") format("eot"), url("../Fonts/25fea31c-0cde-4457-b875-139b2f814d65.woff") format("woff"), url("../Fonts/8304ee6d-ecc7-4c17-bc8d-86f956dd63ed.ttf") format("truetype"), url("../Fonts/b08d6b72-1661-499a-be7b-a62094eab547.svg#b08d6b72-1661-499a-be7b-a62094eab547") format("svg");
+}
+/**
+ * This support file is used to style the WYSIWYG editor in the CMS
+ */
+/* line 5, ../sass/core/_components.scss */
+.bullet:after {
+  content: '\2022';
+  padding-left: 3px;
+}
+
+/*!
+* Line break
+*/
+/**
+* These are the styles that are page specific. In an ideal world; these would
+* not exist as all pages would be similiar.
+*
+* notes below so files can be either linked to or included globally later if possible
+ */
+/**
+ * This support file is used to style the WYSIWYG editor in the CMS
+ */
+/* line 5, ../sass/pages/_contact.scss */
+#bodyContact {
+  background-image: url("/assets/pages/contactUsBackground.png");
+  background-color: #e1477e;
+  height: 100%;
+  display: block;
+  width: 100%;
+  float: left;
+  background-position: top;
+  background-repeat: repeat;
+  min-height: 600px;
+}
+/* line 15, ../sass/pages/_contact.scss */
+#bodyContact .contentWrapper {
+  min-width: 1375px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  min-height: 800px;
+}
+/* line 23, ../sass/pages/_contact.scss */
+#bodyContact .columnRight {
+  display: inline-block;
+  width: 35%;
+  overflow: hidden;
+  height: 100%;
+}
+/* line 28, ../sass/pages/_contact.scss */
+#bodyContact .columnRight .mainImage img {
+  height: 88%;
+  margin-left: 90px;
+  padding-top: 40px;
+  position: absolute;
+  bottom: -54;
+  min-height: 600px;
+}
+/* line 37, ../sass/pages/_contact.scss */
+#bodyContact .columnLeft {
+  width: 54%;
+  padding: 0px;
+  display: inline-block;
+  margin: 0px;
+  vertical-align: top;
+  float: left;
+}
+/* line 44, ../sass/pages/_contact.scss */
+#bodyContact .columnLeft #contactList {
+  display: block;
+  font-size: 32px;
+  color: #0b0b0b;
+  position: absolute;
+  top: 512px;
+  left: 203px;
+}
+/* line 52, ../sass/pages/_contact.scss */
+#bodyContact .columnLeft #contactList li {
+  float: left;
+  padding-right: 51px;
+  list-style-type: disc;
+  font-weight: 800;
+}
+/* line 59, ../sass/pages/_contact.scss */
+#bodyContact .columnLeft #nameLarge {
+  top: 177px;
+  left: 251px;
+  position: relative;
+  height: 428px;
+  width: 700px;
+  z-index: 99;
+}
+/* line 67, ../sass/pages/_contact.scss */
+#bodyContact .columnLeft #logo {
+  height: 332px;
+  width: auto;
+}
+/* line 71, ../sass/pages/_contact.scss */
+#bodyContact .columnLeft #contactIcons {
+  top: 191px;
+  left: 278px;
+  position: relative;
+  z-index: 99;
+}
+/* line 77, ../sass/pages/_contact.scss */
+#bodyContact .columnLeft #facebookIcon {
+  top: 0px;
+  left: 0px;
+  padding-right: 45px;
+}
+/* line 82, ../sass/pages/_contact.scss */
+#bodyContact .columnLeft #pinterestIcon {
+  top: 0px;
+  left: 100px;
+  padding-right: 45px;
+}
+/* line 87, ../sass/pages/_contact.scss */
+#bodyContact .columnLeft #instagramIcon {
+  top: 0px;
+  left: 200px;
+  padding-right: 45px;
+}
+/* line 92, ../sass/pages/_contact.scss */
+#bodyContact .columnLeft #youTubeIcon {
+  top: 0px;
+  left: 300;
+  padding-right: 45px;
+}
+/* line 97, ../sass/pages/_contact.scss */
+#bodyContact .columnLeft #emailIcon {
+  top: 0px;
+  left: 400px;
+}
+
+/**
+ * This support file is used to style the WYSIWYG editor in the CMS
+ */
+/* line 5, ../sass/pages/_home.scss */
+#bodyHome {
+  background-color: #e1477e;
+  height: 100%;
+  position: absolute;
+  display: block;
+  width: 100%;
+  float: left;
+  left: 0;
+  top: 0;
+  min-width: 1375px;
+  min-height: 905px;
+}
+/* line 16, ../sass/pages/_home.scss */
+#bodyHome .backgroundWrapper {
+  background-image: url("/assets/Uploads/background-pink-gradient.png");
+  height: 100%;
+  width: auto;
+  min-height: 905px;
+  min-width: 1375px;
+  background-position: bottom;
+  background-repeat: repeat-x;
+}
+/* line 25, ../sass/pages/_home.scss */
+#bodyHome .mainImage {
+  height: 100%;
+  float: right;
+}
+/* line 29, ../sass/pages/_home.scss */
+#bodyHome .columnRight {
+  position: absolute;
+  float: right;
+  right: -110px;
+}
+/* line 34, ../sass/pages/_home.scss */
+#bodyHome .mainImage img {
+  height: 100%;
+  position: relative;
+  bottom: 0;
+  border: none;
+}
+/* line 41, ../sass/pages/_home.scss */
+#bodyHome .columnLeft .Title1 {
+  font-family: "Proxima N W15 Cd Light", Helvetica, Verdana, Arial, sans-serif;
+  color: white;
+  display: inline-block;
+  font-size: 10em;
+  position: absolute;
+  width: 25%;
+  top: 167px;
+  padding: 0px;
+  left: 164px;
+  letter-spacing: 9px;
+}
+/* line 53, ../sass/pages/_home.scss */
+#bodyHome .columnLeft .Title2 {
+  color: #f7d501;
+  display: block;
+  font-size: 10em;
+  position: absolute;
+  padding: 0px;
+  font-family: "Proxima N W01 Bold", Helvetica, Verdana, Arial, sans-serif;
+  left: 165px;
+  top: 282px;
+  letter-spacing: -4.6px;
+}
+/* line 64, ../sass/pages/_home.scss */
+#bodyHome .columnLeft .SubTitle {
+  display: block;
+  font-size: 23px;
+  color: white;
+  position: absolute;
+  top: 53%;
+  left: 4%;
+}
+/* line 72, ../sass/pages/_home.scss */
+#bodyHome .columnLeft .featureVideo {
+  width: 539px;
+  height: 318px;
+  display: block;
+  position: absolute;
+  left: 174px;
+  top: 508px;
+}
+/* line 80, ../sass/pages/_home.scss */
+#bodyHome #jobTitleList {
+  display: block;
+  font-size: 29px;
+  color: white;
+  position: absolute;
+  top: 427px;
+  left: 133px;
+  list-style-type: disc;
+}
+/* line 88, ../sass/pages/_home.scss */
+#bodyHome #jobTitleList li {
+  float: left;
+  padding-right: 4px;
+  display: list-item;
+}
+
+/**
+ * This support file is used to style the WYSIWYG editor in the CMS
+ */
+/* line 6, ../sass/pages/_about.scss */
+#bodyAbout {
+  background: url("/assets/pages/aboutUs.png") no-repeat left top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: #343434;
+}
+@media (max-width: 1280px) {
+  /* line 6, ../sass/pages/_about.scss */
+  #bodyAbout {
+    width: 1280px;
+  }
+}
+/* line 17, ../sass/pages/_about.scss */
+#bodyAbout .columnRight {
+  float: right;
+  width: 41%;
+  height: 75%;
+  margin-top: 13%;
+}
+/* line 23, ../sass/pages/_about.scss */
+#bodyAbout .columnRight .title {
+  color: white;
+  padding: 0px;
+  display: block;
+}
+/* line 28, ../sass/pages/_about.scss */
+#bodyAbout .columnRight .title1 {
+  font-family: "Proxima N W15 Cd Light", Helvetica, Verdana, Arial, sans-serif;
+  letter-spacing: 4px;
+  font-size: 85px;
+}
+/* line 33, ../sass/pages/_about.scss */
+#bodyAbout .columnRight .title2 {
+  color: #f7d501;
+  font-size: 92px;
+  position: relative;
+  font-family: "Proxima N W01 Bold", Helvetica, Verdana, Arial, sans-serif;
+  top: -62px;
+  letter-spacing: -0.4px;
+  z-index: 99;
+}
+/* line 42, ../sass/pages/_about.scss */
+#bodyAbout .columnRight #aboutContent {
+  font-family: "Proxima N W15 Cd Light", Helvetica, Verdana, Arial, sans-serif;
+  font-size: 1.5em;
+  width: 82%;
+  color: white;
+  z-index: 99;
+  top: -95px;
+  position: relative;
+}
+/* line 51, ../sass/pages/_about.scss */
+#bodyAbout .columnRight #jobTitleList {
+  display: block;
+  font-size: 17px;
+  font-weight: bold;
+  color: #406531;
+  padding: 0px;
+}
+/* line 58, ../sass/pages/_about.scss */
+#bodyAbout .columnRight #jobTitleList li {
+  float: left;
+  padding-right: 3px;
+  list-style-type: disc;
+}
+
+/**
+ * This support file is used to style the WYSIWYG editor in the CMS
+ */
+/* line 4, ../sass/pages/_video.scss */
+#bodyVideo {
+  position: absolute;
+  display: block;
+  width: 100%;
+  float: left;
+  left: 0;
+  top: 0;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+@media (min-width: 1280px) {
+  /* line 4, ../sass/pages/_video.scss */
+  #bodyVideo {
+    background: url("/assets/pages/videos.gif") no-repeat center center;
+    background-color: #383131;
+  }
+}
+@media (max-width: 1280px) {
+  /* line 4, ../sass/pages/_video.scss */
+  #bodyVideo {
+    background: url("/assets/pages/videos.gif") no-repeat left center;
+    background-position: -118px 0px;
+    background-color: #383131;
+  }
+}
+/* line 26, ../sass/pages/_video.scss */
+#bodyVideo .backgroundImage {
+  width: 100%;
+  float: left;
+}
+/* line 31, ../sass/pages/_video.scss */
+#bodyVideo .columnRight {
+  position: absolute;
+  right: 0px;
+  top: 118px;
+  height: 500px;
+  width: 388px;
+  z-index: 99;
+}
+/* line 39, ../sass/pages/_video.scss */
+#bodyVideo .columnRight .Title {
+  color: #004539;
+  padding: 0px;
+  display: block;
+}
+/* line 44, ../sass/pages/_video.scss */
+#bodyVideo .columnRight .Title1 {
+  font-family: "Proxima N W15 Cd Light", Helvetica, Verdana, Arial, sans-serif;
+  letter-spacing: 4px;
+  font-size: 85px;
+}
+/* line 49, ../sass/pages/_video.scss */
+#bodyVideo .columnRight .Title2 {
+  font-size: 81px;
+  font-family: "Proxima N W01 Bold", Helvetica, Verdana, Arial, sans-serif;
+  top: -7px;
+  position: relative;
+  line-height: 16px;
+}
+/* line 57, ../sass/pages/_video.scss */
+#bodyVideo .columnRight .featureVideo {
+  padding: 10px;
+  width: 463px;
+  height: 253px;
+  display: block;
+  background-color: gray;
+  position: relative;
+  left: 72px;
+  top: 19px;
+}
+/* line 68, ../sass/pages/_video.scss */
+#bodyVideo .columnRight #jobTitleList {
+  display: block;
+  font-size: 17px;
+  font-weight: bold;
+  color: #406531;
+  padding: 0px;
+}
+/* line 75, ../sass/pages/_video.scss */
+#bodyVideo .columnRight #jobTitleList li {
+  float: left;
+  padding-right: 3px;
+  list-style-type: disc;
+}
+
+/**
+ * This support file is used to style the WYSIWYG editor in the CMS
+ */
+/* line 5, ../sass/pages/_gallery.scss */
+#bodyGallery {
+  background-color: #8cdee4;
+  height: 100%;
+  position: absolute;
+  display: block;
+  width: 100%;
+  float: left;
+  left: 0;
+  top: 0;
+  background-position: bottom;
+  background-repeat: repeat-x;
+}
+/* line 16, ../sass/pages/_gallery.scss */
+#bodyGallery .mainImage {
+  position: relative;
+  right: -12%;
+  top: 87px;
+  border: none;
+  height: 30%;
+  float: left;
+}
+/* line 24, ../sass/pages/_gallery.scss */
+#bodyGallery .lowerImage {
+  top: 659px;
+  left: 0px;
+  width: 100px;
+  position: relative;
+}
+/* line 30, ../sass/pages/_gallery.scss */
+#bodyGallery .columnRight {
+  display: block;
+  width: 41%;
+  height: 100%;
+  position: absolute;
+  left: 755px;
+  z-index: 65;
+}
+/* line 37, ../sass/pages/_gallery.scss */
+#bodyGallery .columnRight #featuredPhotoContentWrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+/* line 43, ../sass/pages/_gallery.scss */
+#bodyGallery .columnRight .photoHolder {
+  display: block;
+  background-color: white;
+  top: 38%;
+  left: 0;
+  height: 50%;
+  width: 100%;
+  position: relative;
+}
+/* line 53, ../sass/pages/_gallery.scss */
+#bodyGallery .columnLeft {
+  width: 54%;
+  padding: 0px;
+  display: inline-block;
+  margin: 0px;
+  vertical-align: top;
+  float: left;
+  top: 175px;
+  height: 521px;
+  position: absolute;
+}
+/* line 63, ../sass/pages/_gallery.scss */
+#bodyGallery .columnLeft .Title1 {
+  font-family: "Proxima N W15 Cd Light", Helvetica, Verdana, Arial, sans-serif;
+  color: white;
+  display: inline-block;
+  font-size: 8em;
+  position: absolute;
+  width: 25%;
+  top: -43px;
+  padding: 0px;
+  left: 163px;
+  letter-spacing: 9px;
+  z-index: 50;
+}
+/* line 76, ../sass/pages/_gallery.scss */
+#bodyGallery .columnLeft .Title2 {
+  color: #f7d501;
+  display: block;
+  font-size: 8em;
+  position: absolute;
+  padding: 0px;
+  font-family: "Proxima N W01 Bold", Helvetica, Verdana, Arial, sans-serif;
+  left: 164px;
+  top: 56px;
+  letter-spacing: -4.6px;
+  z-index: 50;
+}
+/* line 88, ../sass/pages/_gallery.scss */
+#bodyGallery .columnLeft #jobTitleList {
+  display: block;
+  font-size: 23px;
+  color: white;
+  position: absolute;
+  top: 175px;
+  left: 127px;
+  z-index: 50;
+}
+/* line 97, ../sass/pages/_gallery.scss */
+#bodyGallery .columnLeft #jobTitleList li {
+  float: left;
+  padding-right: 4px;
+  list-style-type: disc;
+}
+/* line 103, ../sass/pages/_gallery.scss */
+#bodyGallery .columnLeft #resumeContent {
+  font-family: "Proxima N W15 Cd Light", Helvetica, Verdana, Arial, sans-serif;
+  font-size: 1.3em;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  width: 50%;
+  color: #574949;
+  z-index: 50;
+  top: 313px;
+  left: 247px;
+  position: relative;
+}
+
+/**
+ * This support file is used to style the WYSIWYG editor in the CMS
+ */
+/* line 4, ../sass/pages/_resume.scss */
+#bodyResume {
+  background-color: #6D844F;
+  height: 100%;
+  position: absolute;
+  display: block;
+  width: 100%;
+  float: left;
+  left: 0;
+  top: 0;
+  min-width: 1375px;
+  min-height: 789px;
+}
+/* line 17, ../sass/pages/_resume.scss */
+#bodyResume .backgroundWrapper {
+  background-image: url("/assets/pages/homelessHottiesGradient.png");
+  height: 100%;
+  width: auto;
+  background-position: top;
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  min-width: 1375px;
+  min-height: 789px;
+}
+/* line 28, ../sass/pages/_resume.scss */
+#bodyResume .mainImage {
+  height: 100%;
+}
+/* line 30, ../sass/pages/_resume.scss */
+#bodyResume .mainImage img {
+  height: 90%;
+  margin-top: 150px;
+  margin-left: -33px;
+  position: absolute;
+  bottom: 0px;
+}
+/* line 38, ../sass/pages/_resume.scss */
+#bodyResume .filmContainer {
+  padding-top: 80px;
+  width: 100%;
+  height: 383px;
+  z-index: 60;
+  display: block;
+  position: absolute;
+}
+/* line 46, ../sass/pages/_resume.scss */
+#bodyResume #filmStrip {
+  top: 0;
+  width: 100%;
+  z-index: 60;
+}
+/* line 51, ../sass/pages/_resume.scss */
+#bodyResume .columnRight {
+  display: inline-block;
+  width: 35%;
+  height: 100%;
+  position: absolute;
+  left: 743px;
+  z-index: 65;
+}
+/* line 59, ../sass/pages/_resume.scss */
+#bodyResume .columnLeft {
+  width: 54%;
+  padding: 0px;
+  display: inline-block;
+  margin: 0px;
+  vertical-align: top;
+  float: left;
+  top: 183px;
+  height: 521px;
+  position: absolute;
+}
+@media (min-width: 1280px) {
+  /* line 59, ../sass/pages/_resume.scss */
+  #bodyResume .columnLeft {
+    z-index: 65;
+  }
+}
+/* line 72, ../sass/pages/_resume.scss */
+#bodyResume .columnLeft .Title1 {
+  font-family: "Proxima N W15 Cd Light", Helvetica, Verdana, Arial, sans-serif;
+  color: white;
+  display: inline-block;
+  font-size: 6em;
+  position: absolute;
+  width: 25%;
+  top: 113px;
+  padding: 0px;
+  left: 246px;
+  letter-spacing: 9px;
+  z-index: 50;
+}
+/* line 85, ../sass/pages/_resume.scss */
+#bodyResume .columnLeft .Title2 {
+  color: #f7d501;
+  display: block;
+  font-size: 6em;
+  position: absolute;
+  padding: 0px;
+  font-family: "Proxima N W01 Bold", Helvetica, Verdana, Arial, sans-serif;
+  left: 245px;
+  top: 187px;
+  letter-spacing: -4.6px;
+  z-index: 50;
+}
+/* line 97, ../sass/pages/_resume.scss */
+#bodyResume .columnLeft #jobTitleList {
+  display: block;
+  font-size: 17px;
+  color: white;
+  position: absolute;
+  top: 273px;
+  left: 204px;
+  z-index: 50;
+}
+/* line 106, ../sass/pages/_resume.scss */
+#bodyResume .columnLeft #jobTitleList li {
+  float: left;
+  padding-right: 4px;
+  list-style-type: disc;
+}
+/* line 112, ../sass/pages/_resume.scss */
+#bodyResume .columnLeft #resumeContent {
+  font-family: "Proxima N W15 Cd Light", Helvetica, Verdana, Arial, sans-serif;
+  font-size: 1.3em;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  width: 50%;
+  color: #574949;
+  z-index: 50;
+  top: 313px;
+  left: 247px;
+  position: relative;
+}
+
+/* Include this last so it overrides settings form pages */
+/*!
+* Line break
+*/
+
+/*# sourceMappingURL=screen.css.map */

@@ -1,0 +1,92 @@
+/*
+ * Common CSS
+ *
+ */
+
+/* !warning */
+.warning span.externalTooltip, 
+a.warningLink span, 
+.warning-fr span.externalTooltip, 
+a.warningLink-fr span, 
+.warning-sp span.externalTooltip, 
+a.warningLink-sp span {
+	display: none; 
+	padding: 5px;
+	font: normal 10px/12px Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	background: #FFFFFF;
+	border: 1px solid #CCCCCC;
+	width: 150px;
+	color: #444;
+	text-align: left;
+}
+
+.warning,
+.warning-fr,
+.warning-sp { 
+	position: relative; 
+    z-Index: 100;
+
+    a, a:hover {
+        text-decoration: none;
+    }
+}
+
+.warning span.externalTooltip,
+.warning-sp span.externalTooltip { 
+	position: absolute; 
+	margin-left: 80px;
+	margin-top: -80px;
+	top: 0px;
+	left: 0px;
+    z-Index: 100;
+}
+.warning-fr span.externalTooltip {
+	position: absolute; 
+	margin-left: 80px;
+	margin-top: -92px;
+	top: 0px;
+	left: 0px;
+    z-Index: 100;
+}
+
+.warning:hover span.externalTooltip, 
+.warning.whover span.externalTooltip,
+.warning-fr:hover span.externalTooltip, 
+.warning-fr.whover span.externalTooltip,
+.warning-sp:hover span.externalTooltip, 
+.warning-sp.whover span.externalTooltip { 
+	display: block; 
+}
+
+a.warningLink span,
+a.warningLink-sp span {
+	margin-left: -80px;
+	margin-top: -80px;
+}
+a#fbBtn.warningLink span, a#fbBtn.warningLink-sp span,
+a#youtubeBtn.warningLink span, a#youtubeBtn.warningLink-sp span {
+  margin-left: -180px;
+  margin-top: -20px;
+}
+
+a.warningLink-fr span {
+	margin-left: -80px;
+	margin-top: -92px;
+}
+
+
+a.warningLink:hover,
+a.warningLink-fr:hover,
+a.warningLink-sp:hover {
+	background: none;
+	text-decoration: none;
+}
+
+a.warningLink:hover span,
+a.warningLink-fr:hover span,
+a.warningLink-sp:hover span {
+ 	display: inline;
+ 	position: absolute;
+    z-Index: 100;
+}

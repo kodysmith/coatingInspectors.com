@@ -1,0 +1,107 @@
+/**
+ * This support file is used to style the WYSIWYG editor in the CMS
+ */
+
+#mainNav{
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    z-index: 999;
+    padding-right: 65px;
+    background: #fdfcff;
+    width: 100px;
+    height: 47px;
+    ul{
+      background-image: url("/assets/img/Navigation/paper.png");
+      background-position-x: right;
+      display: block;
+      height: 47px;
+      padding: 0px 0px 0px 30px;
+      margin: 0px;
+      position: absolute;
+      width: 787px;
+      background-repeat: no-repeat;
+    }
+    li{
+      float: left;
+      position: relative;
+      padding-left: 10px;
+      font-weight: bolder;
+      margin-top: 0px;
+      font-size: 2em;
+      a{
+        color:#e1477e;
+      }
+      
+    }
+    #facebookNav{
+      padding-left: 10px;
+    }
+    #navCookie{
+      width: 100px;
+      height: 106px;
+      z-index: 1000;
+      position: absolute;
+      display: block;
+      background-image: url("/assets/img/Navigation/cookie.png");
+      left: -72px;
+      top: -30px;
+    }
+  }
+#bodyAbout{
+	background-image: url('/assets/Uploads/aboutUsGradient.png');
+	height: 100%;
+	position: absolute;
+	display: block;
+	width: 100%;
+	float: left;
+	left: 0;
+	top: 0;
+	background-position: bottom;
+	background-repeat: repeat-x;
+	
+  .mainImage {
+    width: 100%;
+    float: left;
+    
+  }
+  .mainImage img {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    border: none;
+  }
+  .columnLeft .Title1 {
+    color: white;
+    display: block;
+    font-size: 8em;
+    position: relative;
+    padding: 19% 0% 0% 6%;
+    font-family:Montserrat;
+  }
+  .columnLeft .Title2 {
+    color: white;
+    display: block;
+    font-size: 9em;
+    position: relative;
+    padding: 8% 0% 5% 6%;
+    font-family: Montserrat;
+    font-weight: 700;
+  }
+  .columnLeft .SubTitle {
+    display: block;
+    padding: 0px 0px 0% 7%;
+    font-size: 23px;
+    color: white;
+  }
+  .columnLeft .featureVideo {
+    padding: 10px;
+    width: 463px;
+    height: 253px;
+    display: block;
+    background-color: gray;
+    position: relative;
+    left: 72px;
+    top: 19px;
+  }
+}

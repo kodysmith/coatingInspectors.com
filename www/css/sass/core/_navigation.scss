@@ -1,0 +1,62 @@
+#mainNav{
+    position: absolute;
+    left: 171px;
+    top: 80px;
+    z-index: 999;
+        
+    #navCookieBanner{
+      width: 993px;
+      height: 70px;
+      position: relative;
+      left: 63px;
+      display: block;
+      #navCookieBannerImage{
+        height: 53px;
+        width: 812px;
+        position: relative;
+        top: 5px;
+      }
+    }    
+    ul{
+      display: block;
+      height: 47px;
+      padding: 0px 0px 0px 30px;
+      margin: 0px;
+      position: absolute;
+      width: 996px;
+      background-repeat: no-repeat;
+      top:14px;
+      left: 0px;
+    }
+    li{
+      float: left;
+      position: relative;
+      padding-left: 21px;
+      font-weight: bolder;
+      margin-top: 0px;
+      font-size: 1.5em;
+      a{
+        color:#e1477e;
+        text-decoration: none;
+      }
+      
+    }
+    #facebookNav{
+      padding-left: 10px;
+    }
+    #navCookie{
+      width: 127px;
+      z-index: 1000;
+      position: absolute;
+      display: block;
+      left: -14px;
+      top: -47px;
+      img{
+        width: 100%;
+        height: auto;
+      }
+    .navSelected {
+      text-decoration: underline;
+    }
+    }
+  }

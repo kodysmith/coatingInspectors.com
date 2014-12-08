@@ -1,0 +1,82 @@
+/**
+ * This support file is used to style the WYSIWYG editor in the CMS
+ */
+#bodyVideo{
+    position: absolute;
+    display: block;
+    width: 100%;
+    float: left;
+    left: 0;
+    top: 0;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+  @media (min-width:1280px){
+    background: url('/assets/pages/videos.gif') no-repeat center center;
+    background-color: rgb(56,49,49);
+ 
+  }
+  @media (max-width:1280px){
+    background: url('/assets/pages/videos.gif') no-repeat left center ; 
+    background-position: -118px 0px;
+    background-color: rgb(56,49,49);
+  }
+  .backgroundImage{ 
+    width: 100%;
+    float: left;
+    
+  }
+  .columnRight {
+    position: absolute;
+    right: 0px;
+    top: 118px;
+    height: 500px;
+    width: 388px;
+    z-index: 99;
+        
+    .Title{     
+      color: rgb(0,69,57);
+      padding: 0px;
+      display: block;
+    }
+    .Title1 {
+      font-family: $fontProximaCondLight;
+      letter-spacing: 4px;
+      font-size: 85px;
+    }
+    .Title2 {
+      font-size: 81px;
+      font-family: $fontProximaBold;
+      top: -7px;
+      position: relative;
+      line-height: 16px;
+
+    }
+    .featureVideo {
+      padding: 10px;
+      width: 463px;
+      height: 253px;
+      display: block;
+      background-color: gray;
+      position: relative;
+      left: 72px;
+      top: 19px;
+    }
+  
+    #jobTitleList{
+      display: block;
+      font-size: 17px;
+      font-weight: bold;
+      color: #406531;
+      padding: 0px;
+
+    li{
+      float: left;
+      padding-right: 3px;
+      list-style-type: disc;
+      }
+  }
+  }
+}

@@ -1,0 +1,8 @@
+/**
+ * This support file is used to style the WYSIWYG editor in the CMS
+ */
+
+.bullet:after{
+       content: '\2022';
+       padding-left: 3px;
+      }

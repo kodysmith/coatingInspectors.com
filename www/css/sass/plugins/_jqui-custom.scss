@@ -1,0 +1,47 @@
+.ui-dialog.contentBox {
+    border: 2px solid orange;
+    padding-top: 40px;
+
+    .ui-widget-header {
+        background: 0;
+        border: 0;
+    }
+
+    .ui-dialog-titlebar {
+        display: none;
+    }
+
+    .ui-dialog-titlebar-close {
+        position: absolute;
+        right: 15px;
+        top: 25px;
+    }
+
+    h1 {
+        color: #5619c7;
+        font: 30px/100% $fontTaffy;
+        margin-top: 0;
+        text-transform: none;
+    }
+
+    h2 {
+        color: #f37023;
+        font: 24px/100% $fontFlamenco;
+    }
+
+    .ui-widget-content {
+        background: transparent;
+    }
+
+    .ui-dialog-buttonpane {
+        border: 0;
+    }
+}
+
+.noClose .ui-dialog-titlebar-close {
+    display: none;
+}
+
+.ui-widget-overlay {
+    background: #000;
+}
