@@ -47,6 +47,7 @@ $fontRounded: "HelveticaW01-RoundedBd", $fontDefault;
  * Google hosted fonts. Include the include script in your page header file and
  * then reference the font name here
  */
+@import "http://fonts.googleapis.com/css?family=Ubuntu";
 @font-face {
   font-family: "Proxima N W01 Reg";
   src: url("../Fonts/7e90123f-e4a7-4689-b41f-6bcfe331c00a.eot?#iefix");
@@ -629,6 +630,85 @@ form select.required, form select.invalid {
   background: #FFE7E2;
 }
 
+/* Below line is write to use Google font online */
+/* line 3, ../sass/core/_mobileForms.scss */
+div#main {
+  width: 830px;
+  height: 650px;
+  margin: 0 auto;
+  font-family: "Ubuntu", sans-serif;
+}
+
+/* line 9, ../sass/core/_mobileForms.scss */
+div#form_sample {
+  text-align: center;
+  border: 1px solid #ccc;
+  width: 300px;
+  padding: 0 50px 15px;
+  margin-top: 20px;
+  box-shadow: 0 0 15px;
+  border-radius: 6px;
+  float: left;
+}
+
+/* line 19, ../sass/core/_mobileForms.scss */
+#main h1 {
+  margin-top: 40px;
+}
+
+/* line 22, ../sass/core/_mobileForms.scss */
+hr {
+  margin-top: -5px;
+}
+
+/* line 25, ../sass/core/_mobileForms.scss */
+label {
+  float: left;
+  font-size: 0.75em;
+}
+
+/* line 29, ../sass/core/_mobileForms.scss */
+input[type="text"] {
+  width: 250px;
+  margin-top: 5px;
+  height: 16px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 3px solid #2BC1F2;
+}
+
+/* line 37, ../sass/core/_mobileForms.scss */
+textarea {
+  width: 250px;
+  border: 3px solid #2BC1F2;
+  padding: 10px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  height: 100px;
+  resize: none;
+}
+
+/* line 46, ../sass/core/_mobileForms.scss */
+input[type="submit"] {
+  width: 250px;
+  padding: 10px 45px;
+  background-color: #2BC1F2;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: "Ubuntu", sans-serif;
+}
+
+/* -------------------------------------
+CSS for Sidebar (optional)
+---------------------------------------- */
+/* line 60, ../sass/core/_mobileForms.scss */
+div#fugo {
+  float: right;
+}
+
 /*http://blog.typekit.com/2011/11/09/type-study-sizing-the-legible-letter/*/
 /* line 2, ../sass/core/_structure.scss */
 html {
@@ -643,28 +723,35 @@ body {
 
 /* line 1, ../sass/core/_navigation.scss */
 #mainNav {
-  position: absolute;
-  left: 171px;
-  top: 80px;
+  background-image: url(http://localhost/coatingInspectors.com/www/assets/img/Navigation/header_background.png);
+  position: relative;
+  left: 0px;
+  top: 0px;
+  height: 50px;
   z-index: 999;
+ /*   #navBannerImage{
+      background-image: "/assets/img/Navigation/header_background.png";
+      height: 53px;
+      position: relative;
+      top: 5px;
+      background-repeat: repeat-x;
+*/
 }
-/* line 7, ../sass/core/_navigation.scss */
-#mainNav #navCookieBanner {
-  width: 993px;
-  height: 70px;
+/* line 8, ../sass/core/_navigation.scss */
+#mainNav #menuButton {
+  position: absolute;
+}
+/* line 12, ../sass/core/_navigation.scss */
+#mainNav #bannerPhone {
+  font-family: arial;
+  color: white;
+  font-size: 2em;
+  left: 86px;
   position: relative;
-  left: 63px;
-  display: block;
 }
-/* line 13, ../sass/core/_navigation.scss */
-#mainNav #navCookieBanner #navCookieBannerImage {
-  height: 53px;
-  width: 812px;
-  position: relative;
-  top: 5px;
-}
-/* line 20, ../sass/core/_navigation.scss */
-#mainNav ul {
+
+/* line 27, ../sass/core/_navigation.scss */
+ul {
   display: block;
   height: 47px;
   padding: 0px 0px 0px 30px;
@@ -675,8 +762,9 @@ body {
   top: 14px;
   left: 0px;
 }
-/* line 31, ../sass/core/_navigation.scss */
-#mainNav li {
+
+/* line 38, ../sass/core/_navigation.scss */
+li {
   float: left;
   position: relative;
   padding-left: 21px;
@@ -684,31 +772,19 @@ body {
   margin-top: 0px;
   font-size: 1.5em;
 }
-/* line 38, ../sass/core/_navigation.scss */
-#mainNav li a {
+/* line 45, ../sass/core/_navigation.scss */
+li a {
   color: #e1477e;
   text-decoration: none;
 }
-/* line 44, ../sass/core/_navigation.scss */
-#mainNav #facebookNav {
+
+/* line 51, ../sass/core/_navigation.scss */
+#facebookNav {
   padding-left: 10px;
 }
-/* line 47, ../sass/core/_navigation.scss */
-#mainNav #navCookie {
-  width: 127px;
-  z-index: 1000;
-  position: absolute;
-  display: block;
-  left: -14px;
-  top: -47px;
-}
+
 /* line 54, ../sass/core/_navigation.scss */
-#mainNav #navCookie img {
-  width: 100%;
-  height: auto;
-}
-/* line 58, ../sass/core/_navigation.scss */
-#mainNav #navCookie .navSelected {
+.navSelected {
   text-decoration: underline;
 }
 
@@ -917,7 +993,7 @@ $fontRounded: "HelveticaW01-RoundedBd", $fontDefault;
  */
 /* line 5, ../sass/pages/_home.scss */
 #bodyHome {
-  background-color: #e1477e;
+  background-color: white;
   height: 100%;
   position: absolute;
   display: block;
@@ -925,95 +1001,6 @@ $fontRounded: "HelveticaW01-RoundedBd", $fontDefault;
   float: left;
   left: 0;
   top: 0;
-  min-width: 1375px;
-  min-height: 905px;
-}
-/* line 16, ../sass/pages/_home.scss */
-#bodyHome .backgroundWrapper {
-  background-image: url("/assets/Uploads/background-pink-gradient.png");
-  height: 100%;
-  width: auto;
-  min-height: 905px;
-  min-width: 1375px;
-  background-position: bottom;
-  background-repeat: repeat-x;
-}
-/* line 25, ../sass/pages/_home.scss */
-#bodyHome .mainImage {
-  height: 100%;
-  float: right;
-}
-/* line 29, ../sass/pages/_home.scss */
-#bodyHome .columnRight {
-  position: absolute;
-  float: right;
-  right: -110px;
-}
-/* line 34, ../sass/pages/_home.scss */
-#bodyHome .mainImage img {
-  height: 100%;
-  position: relative;
-  bottom: 0;
-  border: none;
-}
-/* line 41, ../sass/pages/_home.scss */
-#bodyHome .columnLeft .Title1 {
-  font-family: "Proxima N W15 Cd Light", Helvetica, Verdana, Arial, sans-serif;
-  color: white;
-  display: inline-block;
-  font-size: 10em;
-  position: absolute;
-  width: 25%;
-  top: 167px;
-  padding: 0px;
-  left: 164px;
-  letter-spacing: 9px;
-}
-/* line 53, ../sass/pages/_home.scss */
-#bodyHome .columnLeft .Title2 {
-  color: #f7d501;
-  display: block;
-  font-size: 10em;
-  position: absolute;
-  padding: 0px;
-  font-family: "Proxima N W01 Bold", Helvetica, Verdana, Arial, sans-serif;
-  left: 165px;
-  top: 282px;
-  letter-spacing: -4.6px;
-}
-/* line 64, ../sass/pages/_home.scss */
-#bodyHome .columnLeft .SubTitle {
-  display: block;
-  font-size: 23px;
-  color: white;
-  position: absolute;
-  top: 53%;
-  left: 4%;
-}
-/* line 72, ../sass/pages/_home.scss */
-#bodyHome .columnLeft .featureVideo {
-  width: 539px;
-  height: 318px;
-  display: block;
-  position: absolute;
-  left: 174px;
-  top: 508px;
-}
-/* line 80, ../sass/pages/_home.scss */
-#bodyHome #jobTitleList {
-  display: block;
-  font-size: 29px;
-  color: white;
-  position: absolute;
-  top: 427px;
-  left: 133px;
-  list-style-type: disc;
-}
-/* line 88, ../sass/pages/_home.scss */
-#bodyHome #jobTitleList li {
-  float: left;
-  padding-right: 4px;
-  display: list-item;
 }
 
 /**

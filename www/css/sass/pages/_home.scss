@@ -3,7 +3,7 @@
  */
 
 #bodyHome{
-	background-color: #e1477e;
+	background-color: white;
 	height: 100%;
 	position: absolute;
 	display: block;
@@ -11,85 +11,4 @@
 	float: left;
 	left: 0;
 	top: 0;
-  min-width: 1375px;
-  min-height: 905px;
-  .backgroundWrapper {
-    background-image: url('/assets/Uploads/background-pink-gradient.png');
-    height: 100%;
-    width: auto;
-    min-height: 905px;
-    min-width: 1375px;
-    background-position: bottom;
-    background-repeat: repeat-x;
-  }
-  .mainImage {
-  	height: 100%;
-  	float: right;
-  }
-  .columnRight {
-     position: absolute;
-     float: right;
-     right: -110px;
-  }
-  .mainImage img {
-  	height: 100%;
-  	position: relative;
-  	bottom: 0;
-  	border: none;
-    
-  }
-  .columnLeft .Title1 {
-    font-family: $fontProximaCondLight;
-    color: white;
-    display: inline-block;
-    font-size: 10em;
-    position: absolute;
-    width: 25%;
-    top: 167px;
-    padding: 0px;
-    left: 164px;
-    letter-spacing: 9px;
-  }
-  .columnLeft .Title2 {
-    color: #f7d501;
-    display: block;
-    font-size: 10em;
-    position: absolute;
-    padding: 0px;
-    font-family: $fontProximaBold;
-    left: 165px;
-    top: 282px;
-    letter-spacing: -4.6px;
-  }
-  .columnLeft .SubTitle {
-    display: block;
-    font-size: 23px;
-    color: white;
-    position: absolute;
-    top: 53%;
-    left: 4%;
-  }
-  .columnLeft .featureVideo {
-    width: 539px;
-    height: 318px;
-    display: block;
-    position: absolute;
-    left: 174px;
-    top: 508px;
-  }
-  #jobTitleList{
-    display: block;
-    font-size: 29px;
-    color: white;
-    position: absolute;
-    top: 427px;
-    left: 133px;
-    list-style-type: disc;
-    li{
-      float: left;
-      padding-right: 4px;
-      display: list-item;
-      }
-  }
-  
 }

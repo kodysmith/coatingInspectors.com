@@ -1,22 +1,29 @@
 #mainNav{
-    position: absolute;
-    left: 171px;
-    top: 80px;
+    background-image: url(http://localhost/coatingInspectors.com/www/assets/img/Navigation/header_background.png);
+    position: relative;
+    left: 0px;
+    top: 0px;
+    height: 50px;
     z-index: 999;
-        
-    #navCookieBanner{
-      width: 993px;
-      height: 70px;
+    #menuButton{
+      position: absolute;
+
+    }
+    #bannerPhone{
+      font-family: arial;
+      color: white;
+      font-size: 2em;
+      left: 86px; 
       position: relative;
-      left: 63px;
-      display: block;
-      #navCookieBannerImage{
+    }
+   /*   #navBannerImage{
+        background-image: "/assets/img/Navigation/header_background.png";
         height: 53px;
-        width: 812px;
         position: relative;
         top: 5px;
-      }
-    }    
+        background-repeat: repeat-x;
+  */
+      }    
     ul{
       display: block;
       height: 47px;
@@ -44,19 +51,6 @@
     #facebookNav{
       padding-left: 10px;
     }
-    #navCookie{
-      width: 127px;
-      z-index: 1000;
-      position: absolute;
-      display: block;
-      left: -14px;
-      top: -47px;
-      img{
-        width: 100%;
-        height: auto;
-      }
     .navSelected {
       text-decoration: underline;
     }
-    }
-  }
